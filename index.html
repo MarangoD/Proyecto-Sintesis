@@ -1,9 +1,155 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
+	<html>
+	<head>
+		<!-- <link rel="shortcut icon" href="img/logos-assoc/4.png"> -->
+		<title>PROYECTE SINTESIS</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script data-require="jquery@*" data-semver="2.1.1" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+		<script data-require="ng-route@1.2.0" data-semver="1.2.0" src="http://code.angularjs.org/1.2.0-rc.3/angular-route.js"></script>
+		<!-- <script src="js/angular.js"></script>
+		<script data-require="ng-route@1.2.0" data-semver="1.2.0" src="js/angular-route.js"></script> -->
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
 
-</body>
+		<!-- TO DO <script>
+			$( document ).ready(function() {
+				
+					if(getCookie('eixbesosavis')!="1"){
+    					document.getElementById("cookie-agree").style.display="block";
+					}
+				});
+			</script> -->
+			<script>
+				$(document).ready(function () {
+
+  					$(".reduceNav").click(function(event) {
+    				$(".navReduced").collapse('hide');
+					});
+					
+				});
+			</script>
+		<link rel="stylesheet" href="css/styles.css"> 
+		<script src="js/app.js"></script>
+		<script src="controllers/shops.js"></script>		
+		<script src="controllers/users.js"></script>
+		<script src="controllers/news.js"></script>
+		<script src="controllers/home.js"></script>
+		<script src="controllers/promotions.js"></script>
+	</head> 
+
+	<body data-ng-app="spaApp" ng-controller="HomeCtrl">
+		<div class="row textSize">
+			<div class="col-xs-8 col-lg-5 marginTopAir">
+				<!-- TO DO <div class="col-xs-4 col-lg-4" id="imgLogoTop" ng-repeat="association in associations | filter:{ idUser:'1'}:true">
+					<a ng-href="#"><img class="img-responsive" id="imgLogoTopId" ng-src="img/logos-assoc/{{association.logo}}"></a>
+				</div> -->
+				<div class="col-xs-8 col-lg-8" id="logoText">
+					<span class="headTitle">TO DO</span>	
+				</div>		
+			</div> 
+		</div>		
+		<nav class="navbar navbar-default navGeneral">
+	  		<div class="container-fluid">
+		    	<div class="navbar-header">
+		      		<button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" id="eraseBorderNavMobile">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+		    		</button>
+		    	</div>
+		    	<div class="collapse navbar-collapse navReduced" id="bs-example-navbar-collapse-1">
+		    		<ul class="nav navbar-nav col-xs-12 col-lg-12" id="navGlobal">
+		        		<li role="presentation" class="customNav reduceNav" ><a ng-href="#"><i class="fa fa-home fa-lg" id="homeIconNav" aria-hidden="true"></i><span class="underline">Mapa Comercial </span> <span class="sr-only">(current)</span></a></li>
+		        		<li class="dividerNav">|</li>
+		        		<li role="presentation" class="dropdown customNav"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="underline">Associacions</span><i class="fa fa-caret-down arrowDown" aria-hidden="true"></i></a>
+		          			<ul class="dropdown-menu no-collapse reduceNav">
+		          				<li  role="presentation" class="widthLiAsso">
+		          					<a ng-href="#" class="submenuFormat"><!-- TO DO <img class="img-responsive" ng-src="img/logos-assoc/{{association.logo}}" align="left"> -->TO DO</a>
+		          					<!-- TO DO <ul role="separator" ng-class="{divider : !$last}"></ul> -->		
+		          				</li>
+		          			</ul>
+		        		</li>
+		        		<li class="dividerNav">|</li>
+		        		<li role="presentation" class="customNav reduceNav"><a ng-href="#/promotions"><span class="underline">Promocions</span></a></li>
+		        		<li class="dividerNav">|</li>
+		        		<li role="presentation" class="customNav reduceNav"><a ng-href="#/news/1"><span class="underline">Notícies</span></a></li>	
+		        		<li class="dividerNav">|</li>
+		        		<li role="presentation" class="customNav reduceNav"><a ng-href="#/formation" class="alignOneLine"><i class="fa fa-bookmark" aria-hidden="true"></i><span class="underline">Formació al Comerç</span></a></li>
+		      		</ul>    
+				</div>
+	   		</div>
+		</nav> 				
+		<div class="row textSize" id="marginBottomSlider">
+			<!-- TO DO <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  				<ol class="carousel-indicators" id="indicatorSlider">
+    				<li data-target="#myCarousel" ng-repeat="sliderImg in slider"  data-slide-to="{{$index}}" ng-class="{active : $index == 0}"></li>
+   				</ol>
+				<div class="carousel-inner">					
+					<div class="item" ng-repeat="sliderImg in slider" ng-class="{active : $index == 0}">
+						<a ng-href="{{sliderImg.link!='' ? sliderImg.link : ''}}" target="_blank"><img ng-src="img/slider/{{sliderImg.image}}" alt="{{sliderImg.description}}"> </a>					
+						<div class="row">
+							<div class="textOverImage" ng-if="sliderImg.title!='' && sliderImg.subtitle!=''">
+								<span id="typeLetter">{{sliderImg.title}}</span>
+								<p id="typeLetterP">{{sliderImg.subtitle}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> -->
+  		</div>  		
+		<!-- TO DO <div id="loadingData" class="textSize" ng-show="loading">
+			<center><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i></center>	
+		</div> -->
+		<div data-ng-view="" id="generalView" ng-hide="loading">				
+  		</div>  		
+  		<div class="row textSize" id="footerColor">
+  			<footer class="footer-bs" id="footer">
+				<!-- TO DO por hacer -->
+    		</footer>
+  		</div>		
+    	<!-- TO DO determinar si poner <div id="cookie-agree" class="textSize">
+			<div class="inner">
+				Sol·licitem el seu permís per a obtenir dades específiques de la seva navegació en aquest web, en 
+				compliment del Real Decret-Llei 13/2012. Si continua navegant, considerarem que accepta l'ús de cookies.
+	        	<a ng-href="javascript:void(0);" class="ok" onclick="PonerCookie();"><b>OK</b></a> | 
+	        	<a ng-href="http://politicadecookies.com" target="_blank" class="info">Més informació</a>
+   		 	</div>
+		</div>
+		<script>
+		function getCookie(c_name){
+		    var c_value = document.cookie;
+		    var c_start = c_value.indexOf(" " + c_name + "=");
+		    if (c_start == -1){
+		        c_start = c_value.indexOf(c_name + "=");
+		    }
+		    if (c_start == -1){
+		        c_value = null;
+		    }else{
+		        c_start = c_value.indexOf("=", c_start) + 1;
+		        var c_end = c_value.indexOf(";", c_start);
+		        if (c_end == -1){
+		            c_end = c_value.length;
+		        }
+		        c_value = unescape(c_value.substring(c_start,c_end));
+		    }
+		    return c_value;
+		}		 
+		function setCookie(c_name,value,exdays){
+		    var exdate=new Date();
+		    exdate.setDate(exdate.getDate() + exdays);
+		    var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+		    document.cookie=c_name + "=" + c_value;
+		}		 
+		function PonerCookie(){
+		    setCookie('eixbesosavis','1',365);
+		    document.getElementById("cookie-agree").style.display="none";
+		}
+		</script> -->
+	</body>	
 </html>
+
