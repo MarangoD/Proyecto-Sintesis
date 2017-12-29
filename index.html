@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 	<html>
 	<head>
-		<!-- <link rel="shortcut icon" href="img/logos-assoc/4.png"> -->
-		<title>PROYECTE SINTESIS</title>
+		<!-- TO DO<link rel="shortcut icon" href="img/logos-assoc/4.png"> -->
+		<title>TO DO</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script data-require="jquery@*" data-semver="2.1.1" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -15,14 +15,14 @@
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
 
-		<!-- TO DO <script>
+		<script>
 			$( document ).ready(function() {
 				
 					if(getCookie('eixbesosavis')!="1"){
     					document.getElementById("cookie-agree").style.display="block";
 					}
 				});
-			</script> -->
+			</script>
 			<script>
 				$(document).ready(function () {
 
@@ -44,7 +44,7 @@
 	<body data-ng-app="spaApp" ng-controller="HomeCtrl">
 		<div class="row textSize">
 			<div class="col-xs-8 col-lg-5 marginTopAir">
-				<!-- TO DO <div class="col-xs-4 col-lg-4" id="imgLogoTop" ng-repeat="association in associations | filter:{ idUser:'1'}:true">
+				<!--TO DO <div class="col-xs-4 col-lg-4" id="imgLogoTop">
 					<a ng-href="#"><img class="img-responsive" id="imgLogoTopId" ng-src="img/logos-assoc/{{association.logo}}"></a>
 				</div> -->
 				<div class="col-xs-8 col-lg-8" id="logoText">
@@ -64,28 +64,35 @@
 		    	</div>
 		    	<div class="collapse navbar-collapse navReduced" id="bs-example-navbar-collapse-1">
 		    		<ul class="nav navbar-nav col-xs-12 col-lg-12" id="navGlobal">
-		        		<li role="presentation" class="customNav reduceNav" ><a ng-href="#"><i class="fa fa-home fa-lg" id="homeIconNav" aria-hidden="true"></i><span class="underline">Mapa Comercial </span> <span class="sr-only">(current)</span></a></li>
+		        		<li role="presentation" class="customNav reduceNav" ><a ng-href="#"><i class="fa fa-home fa-lg" id="homeIconNav" aria-hidden="true"></i><span class="underline">Inici </span> <span class="sr-only">(current)</span></a></li>
 		        		<li class="dividerNav">|</li>
-		        		<li role="presentation" class="dropdown customNav"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="underline">Associacions</span><i class="fa fa-caret-down arrowDown" aria-hidden="true"></i></a>
+		        		<li role="presentation" class="dropdown customNav"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="underline">XML</span><i class="fa fa-caret-down arrowDown" aria-hidden="true"></i></a>
 		          			<ul class="dropdown-menu no-collapse reduceNav">
-		          				<li  role="presentation" class="widthLiAsso">
-		          					<a ng-href="#" class="submenuFormat"><!-- TO DO <img class="img-responsive" ng-src="img/logos-assoc/{{association.logo}}" align="left"> -->TO DO</a>
-		          					<!-- TO DO <ul role="separator" ng-class="{divider : !$last}"></ul> -->		
+		          				<li role="presentation" class="widthLiAsso">
+		          					<a ng-href="#/associations/{{association.idUser}}/{{association.name}}" class="submenuFormat">XML</a>
+		          					<ul role="separator" ng-class="{divider : !$last}"></ul>		
+		          				</li>
+		          				<li role="presentation" class="widthLiAsso">
+		          					<a ng-href="#/associations/{{association.idUser}}/{{association.name}}" class="submenuFormat">DTD</a>
+		          					<ul role="separator" ng-class="{divider : !$last}"></ul>		
+		          				</li>
+		          				<li role="presentation" class="widthLiAsso">
+		          					<a ng-href="#/associations/{{association.idUser}}/{{association.name}}" class="submenuFormat">RSS</a>
 		          				</li>
 		          			</ul>
 		        		</li>
 		        		<li class="dividerNav">|</li>
-		        		<li role="presentation" class="customNav reduceNav"><a ng-href="#/promotions"><span class="underline">Promocions</span></a></li>
+		        		<li role="presentation" class="customNav reduceNav"><a ng-href="#/promotions"><span class="underline">HTML</span></a></li>
 		        		<li class="dividerNav">|</li>
-		        		<li role="presentation" class="customNav reduceNav"><a ng-href="#/news/1"><span class="underline">Notícies</span></a></li>	
+		        		<li role="presentation" class="customNav reduceNav"><a ng-href="#/news/1"><span class="underline">CSS</span></a></li>	
 		        		<li class="dividerNav">|</li>
-		        		<li role="presentation" class="customNav reduceNav"><a ng-href="#/formation" class="alignOneLine"><i class="fa fa-bookmark" aria-hidden="true"></i><span class="underline">Formació al Comerç</span></a></li>
+		        		<li role="presentation" class="customNav reduceNav"><a ng-href="#/formation" class="alignOneLine"><span class="underline">DOLIBARR</span></a></li>
 		      		</ul>    
 				</div>
 	   		</div>
 		</nav> 				
 		<div class="row textSize" id="marginBottomSlider">
-			<!-- TO DO <div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
   				<ol class="carousel-indicators" id="indicatorSlider">
     				<li data-target="#myCarousel" ng-repeat="sliderImg in slider"  data-slide-to="{{$index}}" ng-class="{active : $index == 0}"></li>
    				</ol>
@@ -100,19 +107,19 @@
 						</div>
 					</div>
 				</div>
-			</div> -->
+			</div>
   		</div>  		
-		<!-- TO DO <div id="loadingData" class="textSize" ng-show="loading">
+		<div id="loadingData" class="textSize" ng-show="loading">
 			<center><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i></center>	
-		</div> -->
+		</div>
 		<div data-ng-view="" id="generalView" ng-hide="loading">				
   		</div>  		
   		<div class="row textSize" id="footerColor">
   			<footer class="footer-bs" id="footer">
-				<!-- TO DO por hacer -->
+				<!-- TO DO -->
     		</footer>
   		</div>		
-    	<!-- TO DO determinar si poner <div id="cookie-agree" class="textSize">
+    	<div id="cookie-agree" class="textSize">
 			<div class="inner">
 				Sol·licitem el seu permís per a obtenir dades específiques de la seva navegació en aquest web, en 
 				compliment del Real Decret-Llei 13/2012. Si continua navegant, considerarem que accepta l'ús de cookies.
@@ -149,7 +156,7 @@
 		    setCookie('eixbesosavis','1',365);
 		    document.getElementById("cookie-agree").style.display="none";
 		}
-		</script> -->
+		</script>
 	</body>	
 </html>
 
