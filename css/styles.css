@@ -12,6 +12,10 @@ body{
 a{
 	color: black!important;
 }
+.space-title
+{
+	margin-top: 1.5%;
+}
 .space{
 	margin-top: 2.5%;
 	margin-bottom: 2.5%;
