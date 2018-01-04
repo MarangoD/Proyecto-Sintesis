@@ -2,14 +2,11 @@ var app= angular.module('spaApp', ['ngRoute']);
 app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
     .when('/', {
-        templateUrl: 'views/comercialMap.html',
-        controller: 'ComercialMapCtrl',
+        templateUrl: 'views/quiSom.html',
     })
-
 	.when('/news/:idUser',{
-	templateUrl:'views/news.html',
-	controller:'NewsCtrl',
-
+		templateUrl:'views/news.html',
+		controller:'NewsCtrl',
 	})
 	.when('/new/:idNew',{
 		templateUrl:'views/new.html',
