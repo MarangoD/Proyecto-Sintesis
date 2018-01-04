@@ -12,7 +12,10 @@ body{
 a{
 	color: black!important;
 }
-
+.space{
+	margin-top: 10%;
+	margin-bottom: 10%;
+}
 #loadingIcon{
 	 margin-top: 21%;
 }
