@@ -23,10 +23,15 @@ app.config(['$routeProvider', function ($routeProvider) {
         templateUrl: 'views/promotion.html',
         controller: 'PromotionCtrl',
     })
-	.when('/associations/:idUser/:name',{
-		templateUrl:'views/associations.html',
-		controller:'AssociationsCtrl',
+	.when('/dtd',{
+		templateUrl:'views/dtd.html',
 	})
+	.when('/xml',{
+		templateUrl:'views/xml.html',
+	})
+	/*.when('/rss',{
+		templateUrl:'views/rss.html',
+	})*/
 	.when('/formation',{
 		templateUrl:'views/formation.html',
 	})
