@@ -29,8 +29,8 @@ app.config(['$routeProvider', function ($routeProvider) {
 	/*.when('/rss',{
 		templateUrl:'views/rss.html',
 	})*/
-	.when('/formation',{
-		templateUrl:'views/formation.html',
+	.when('/html',{
+		templateUrl:'views/html.html',
 	})
 	.when('/contact/:idUser',{
 		templateUrl:'views/contact.html',
