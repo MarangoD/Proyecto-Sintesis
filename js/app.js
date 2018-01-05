@@ -19,6 +19,9 @@ app.config(['$routeProvider', function ($routeProvider) {
 	.when('/css',{
 		templateUrl:'views/css.html',
 	})
+	.when('/dolibarr',{
+		templateUrl:'views/dolibarr.html',
+	})
     .otherwise({
         redirectTo: '/'
     }); 
